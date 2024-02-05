@@ -16,7 +16,7 @@ def iss_coordinates():
     response.raise_for_status()
     data = response.json()
     latitude = data["iss_position"]["latitude"]
-    longitude = "The height is: " + data["iss_position"]["longitude"]
+    longitude = data["iss_position"]["longitude"]
 
     latitude_label.configure(text=f"The latitude of the ISS is {latitude}")
     longitude_label.configure(text=f"The longitude of the ISS is {longitude}")
